@@ -1,8 +1,11 @@
 package nico.ponce.proyecto.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class UsuarioEntity {
 	@Id
@@ -14,16 +17,13 @@ public class UsuarioEntity {
     private String email;
 
 	@Column(name = "password")
-    private String pswd;
+    private String password;
 
 	@Column(name = "nombres")
     private String nombres;
 
 	@Column(name = "apellidos")
     private String apellidos;
-
-	@Column(name = "rol")
-    private String rol;
     
     public UsuarioEntity(String email, String password, String nombres, String apellidos) {
         this.email = email;
@@ -32,3 +32,5 @@ public class UsuarioEntity {
         this.apellidos = apellidos;
     }
 }
+
+//la tabla se generará como usuario_entity
