@@ -26,10 +26,10 @@ public class PaisServiceImpl implements PaisService {
     }
 
     @Override
-    public int savePais(PaisEntity p) {
+    public int savePais(PaisEntity paisEntity) {
     	
     	int res = 0;
-    	PaisEntity pais = paisRepository.save(p);
+    	PaisEntity pais = paisRepository.save(paisEntity);
     	
     	if(!pais.equals(null)) {
     		res = 1;

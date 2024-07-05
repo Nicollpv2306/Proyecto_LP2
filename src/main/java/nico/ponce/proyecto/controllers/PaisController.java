@@ -54,11 +54,10 @@ public class PaisController {
 	    return "formpais";
     }
 
-
     // Eliminar pais
     @GetMapping("/eliminar/{id}")
     public String deletePais(@PathVariable int id) {
         paisService.deletePais(id);
-        return "redirect:/paises"; // Redirige a la lista de paises después de eliminar
+        return "redirect:/paises";
     }
 }
